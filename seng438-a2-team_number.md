@@ -2,12 +2,12 @@
 
 **Lab. Report \#2 – Requirements-Based Test Generation**
 
-| Group \#:      |     |
-| -------------- | --- |
-| Student Names: |     |
-|                |     |
-|                |     |
-|                |     |
+| Group \#:      |  9                  |
+| -------------- | ------------------- |
+| Student Names: |  Christina Wyllie   |
+|                |  Maitry Rohit       |
+|                |  Sobia Khan         |
+|                |  Jamie Stade        |
 
 # 1 Introduction
 
