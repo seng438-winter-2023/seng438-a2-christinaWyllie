@@ -61,8 +61,6 @@ public class DataUtilitiesTests {
 	public void createNumberArrayValidInputLengthTest() 
 	{
 		Double[] expectedDoubleArray = {1.0, 1.0, 2.01, 5.0};
-//		double[] myDoubleArray = {1.0, 1, 2.01, 5};
-//		myNumberArray = DataUtilities.createNumberArray(myDoubleArray);
 		assertEquals(expectedDoubleArray.length, myNumberArray.length);
 	}
 	
@@ -83,22 +81,27 @@ public class DataUtilitiesTests {
 //		fail("Not yet implemented");
 //	}
 //	
+	//Test that putting in a valid 2D double array creates the expected Double Array
+	@Test
+	public void createNumberArray2DValidInputTest() 
+	{
+		Double[][] expected2DDoubleArray = {{1.0}, {1.0, 2.01}, {5.0}};
+		assertArrayEquals(expected2DDoubleArray, myNumberArray2D);
+	}
+	
+	// Test that array created has the correct number of rows
 	@Test
 	public void createNumberArray2DCorrectRowsTest() 
 	{
 		Double[][] expected2DDoubleArray = {{1.0}, {1.0, 2.01}, {5.0}};
-//		double[][] myDoubleArray = {{1.0}, {1, 2.01}, {5}};
-//		myNumberArray2D = DataUtilities.createNumberArray2D(myDoubleArray);
 		assertEquals(expected2DDoubleArray.length, myNumberArray2D.length);
 	}
 	
+	// Test that array created has the correct number of columns
 	@Test
 	public void createNumberArray2DCorrectColumnsTest() 
 	{
 		Double[][] expected2DDoubleArray = {{1.0}, {1.0, 2.01}, {5.0}};
-//		double[][] myDoubleArray = {{1.0}, {1, 2.01}, {5}};
-//		myNumberArray2D = DataUtilities.createNumberArray2D(myDoubleArray);
-		
 		for(int i = 0; i < expected2DDoubleArray.length; i++)
 		{
 			assertEquals(expected2DDoubleArray[i].length, myNumberArray2D[i].length);
@@ -112,3 +115,4 @@ public class DataUtilitiesTests {
 //	}
 
 }
+
