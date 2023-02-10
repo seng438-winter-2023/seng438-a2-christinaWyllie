@@ -16,6 +16,7 @@ This assignment focuses on unit testing a black box program. Given a program and
 # 2 Detailed description of unit test strategy
 
 The team is testing all 5 methods in the data utilities class and 5 methods from Range: intersects(), contains(), getLength(), getLowerBound(), getUpperBound().
+We used a combination of boundary value testing and equivalence class testing to design our test cases.
 
 Class DataUtilities:
 - calculateColumnTotal()
