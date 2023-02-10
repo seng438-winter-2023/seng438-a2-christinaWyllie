@@ -90,11 +90,160 @@ Class Range:
 
 # 3 Test cases developed
 
-Text…
+A total of 5 test classes were implemented. This is done in order to not only divide test cases by the classes and methods they belong to but also by who is writing them. 
 
-// write down the name of the test methods and classes. Organize the based on
-the source code method // they test. identify which tests cover which partitions
-you have explained in the test strategy section //above
+Class Name: GetCumulativePercentageTest
+  Test Case Names: 
+    - public void validCumulativePercentage()
+        - Tests valid positive values and ensures the proper percentages are calculated 
+        - PASS
+    - public void invalidCumulativePercentageNull()
+        - Creates a KeyedValues object that is initialized to null. An invalid parameter exception should be thrown
+        - FAIL
+    - public void invalidCumulativePercentage0()
+        - Creates a KeyedValues object that is initialized to 0. An invalid parameter exception should be thrown
+        - PASS
+        
+ Class Name: IntersectsRangeTest
+	Test Case Names: 
+    - public void intersectInvalidLowerBound()
+        - Sends a lower bound that is greater than the upper bound 
+        - Assumption: An assumption is made that this data will intersect because if the bounds were switched it would return true
+        - FAIL
+    - public void intersectInvalidUpperBound()
+        - Sends a upper bound that is greater than the lower bound 
+        - An assumption is made that this data will intersect because if the bounds were switched it would return true
+        - FAIL
+    - public void intersectWithinRange()
+        - When given bound that is within the mock range the test passes
+        - PASS
+    - public void intersectIsRange()
+        - When given bound that is the mock range 
+        - PASS
+    - public void intersectOverlappingLowerBound()
+        - Lower bound given is within the range but the upper bound is not
+        - FAIL
+    - public void intersectOverlappingUpperBound()
+        - Upper bound given is within the range but the lower bound is not
+        - PASS
+    - public void intersectNoOverlappingBoundLHS()
+        - Neither the upper or lower bound should overlap with the given range on the left hand side of range
+        - FAIL
+    - public void intersectNoOverlappingBoundRHS()
+        - Neither the upper or lower bound should overlap with the given range on the right hand side range
+        - PASS
+
+Class Name: CreateNumberArrayTest
+	Test Case Names: 
+  - public void createNumberArrayValidInput()
+    - Tests that passing in valid double array containing both positive and negative numbers creates expected Double array
+  - FAIL
+public void createNumberArrayValidInputLength()
+Tests that passing in both positive and negative numbers in an array creates expected length array
+PASS
+public void createNumberArrayLargeInput()
+Tests that passing in largest positive number that can be held in a double creates expected output 
+PASS
+public void createNumberArraySmallInput()
+Tests that passing in largest negative number that can be held in a double creates expected output 
+PASS
+public void createNumberArrayEmptyInput()
+Tests that passing in an empty double[] creates empty Double[]
+PASS
+public void createNumberArrayThrowsInvalidParameterException() 
+Tests that passing in null data argument throws InvalidParameterException 
+FAIL 
+public void createNumberArray2DValidInput()
+Tests that passing in a valid double[][] with both positive and negative numbers creates expected Double[][]
+FAIL
+public void createNumberArray2DCorrectRowsLength()
+Tests that passing in valid double[][] creates Double[][] with correct number of rows
+PASS
+public void createNumberArray2DCorrectColumnsLength()
+Tests that passing in a double[][] creates Double[][] with the correct number of columns
+PASS 
+public void createNumberArray2DEmptyInput()
+Tests that passing in an empty double[][] creates empty Double[][] 
+PASS
+public void createNumberArray2DLargeInput()
+Tests that passing in a double[][] containing largest positive value that can be held in a double creates the expected Double[][] 
+PASS
+public void createNumberArray2DSmallInput()
+Tests that passing in a double[][] containing largest negative value that can be held in a double creates the expected Double[][] 
+PASS
+public void createNumberArray2DThrowsInvalidParameterException() 
+Tests that passing in null data argument throws invalid parameter exception
+FAIL
+
+Class Name: CalculateTotalTest
+	Test Case Names
+public void calculateColumnWithLowerBound() 
+Tests that passing in the lower bound returns the correct sum of columns with that index. 
+Pass.
+public void calculateColumnWithAboveLowerBound()
+Tests that passing in an in-between value returns the correct sum of columns with that index
+PASS
+public void calculateColumnWithUpperBound()
+Tests that passing in the upper bound returns the correct sum of columns with that index
+PASS
+public void calculateColumnWithNegativeValues()
+Tests that negative values get added up correctly
+PASS
+public void calculateColumnWithNullData()
+Tests that passing in null throws correct exception
+FAIL
+public void calculateRowWithLowerBound()
+Tests that passing in the lower bound returns the correct sum of columns with that index
+FAIL
+public void calculateRowWithAboveLowerBound()
+Tests that passing in an in-between value returns the correct sum of columns with that index
+FAIL
+public void calculateRowWithUpperBound()
+Tests that passing in the upper bound returns the correct sum of columns with that index
+FAIL
+public void calculateRowWithNullData()
+Tests that passing in null throws correct exception
+FAIL
+public void calculateRowWithNegativeValues()
+Tests that negative values get added up correctly
+FAIL
+Class Name: RangeTest
+	Test Case Names
+setUp()
+public void lowerBoundRange() 
+testing method getLowerBound() for case where upper bound != lower bound
+PASS
+public void lowerBoundEqualRange()
+testing method getLowerBound() for case where upper bound == lower bound
+PASS
+public void upperBoundRange() 
+testing method getUpperBound() for case where upper bound != lower bound
+FAIL
+public void upperBoundEqualRange()
+testing method getUpperBound() for case where upper bound == lower bound
+PASS
+public void lengthRange() 
+testing method getLength() for range with length greater than 0
+PASS
+public void lengthEqualRange()
+testing method getLength() for range with length equal to 0
+PASS
+public void rangeContainsValueInRange()
+testing method contains() for valid value between boundary
+PASS
+public void rangeContainsLowerBound()
+testing method contains() for valid value on lower boundary
+PASS
+public void rangeContainsUpperBound()
+testing method contains() for valid value on upper boundary
+PASS
+public void rangeContainsPastLowerBound() 
+testing method contains() for invalid value outside lower boundary
+PASS
+public void rangeContainsPastUpperBound()
+testing method contains() for invalid value outside upper boundary
+PASS
+
 
 # 4 How the team work/effort was divided and managed
 
