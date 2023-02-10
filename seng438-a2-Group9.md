@@ -23,7 +23,7 @@ Class DataUtilities:
     - column == 0 
     - column == data.getColumnCount 
     - 0 < column < data.getColumnCount
-  -Creating Values2D object:
+  - Creating Values2D object:
     - Negative values
     - Positive values
   - Passes invalid input - Throws InvalidParameterException
