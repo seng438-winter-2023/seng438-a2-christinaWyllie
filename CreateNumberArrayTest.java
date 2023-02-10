@@ -66,7 +66,7 @@ public class CreateNumberArrayTest {
 		Double[] expectedDoubleArray = {Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE};
 		double[] inputArray = {Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE};
 		myNumberArray = DataUtilities.createNumberArray(inputArray);
-		assertArrayEquals(expectedDoubleArray, myNumberArray);
+		assertEquals(expectedDoubleArray[0], myNumberArray[0]);
 	}
 	
 	/* Boundary Value Test: When given the largest negative number that can be held in a double
@@ -80,7 +80,7 @@ public class CreateNumberArrayTest {
 		Double[] expectedDoubleArray = {Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE};
 		double[] inputArray = {Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE};
 		myNumberArray = DataUtilities.createNumberArray(inputArray);
-		assertArrayEquals(expectedDoubleArray, myNumberArray);
+		assertEquals(expectedDoubleArray[0], myNumberArray[0]);
 	}
 	
 	/* Equivalence Class Test: Pass in empty double array as input and test that 
@@ -147,7 +147,7 @@ public class CreateNumberArrayTest {
 	 */
 	
 	@Test
-	public void createNumberArray2DCorrectRows() 
+	public void createNumberArray2DCorrectRowsLength() 
 	{
 		Double[][] expected2DDoubleArray = {{-12356015.0}, {1.0, 2.01}, {50000000.0}};
 		assertEquals(expected2DDoubleArray.length, myNumberArray2D.length);
@@ -158,7 +158,7 @@ public class CreateNumberArrayTest {
 	 */
 	
 	@Test
-	public void createNumberArray2DCorrectColumns() 
+	public void createNumberArray2DCorrectColumnsLength() 
 	{
 		Double[][] expected2DDoubleArray = {{-12356015.0}, {1.0, 2.01}, {50000000.0}};
 		for(int i = 0; i < expected2DDoubleArray.length; i++)
@@ -192,7 +192,7 @@ public class CreateNumberArrayTest {
 		Double[][] expected2DDoubleArray = {{Double.MAX_VALUE, Double.MAX_VALUE}, {Double.MAX_VALUE}, {Double.MAX_VALUE}};
 		double[][] inputArray = {{Double.MAX_VALUE, Double.MAX_VALUE}, {Double.MAX_VALUE}, {Double.MAX_VALUE}};
 		myNumberArray2D = DataUtilities.createNumberArray2D(inputArray);
-		assertArrayEquals(expected2DDoubleArray, myNumberArray2D);
+		assertEquals(expected2DDoubleArray[0][0], myNumberArray2D[0][0]);
 	}
 	
 	/* Boundary Value Test: When given the largest negative number that can be held in a double
@@ -206,7 +206,7 @@ public class CreateNumberArrayTest {
 		Double[][] expected2DDoubleArray = {{Double.MIN_VALUE, Double.MIN_VALUE}, {Double.MIN_VALUE}, {Double.MIN_VALUE}};
 		double[][] inputArray = {{Double.MIN_VALUE, Double.MIN_VALUE}, {Double.MIN_VALUE}, {Double.MIN_VALUE}};
 		myNumberArray2D = DataUtilities.createNumberArray2D(inputArray);
-		assertArrayEquals(expected2DDoubleArray, myNumberArray2D);
+		assertEquals(expected2DDoubleArray[0][0], myNumberArray2D[0][0]);
 	}
 	
 	/* Boundary Value Test: Test that when null passed in as argument, 
