@@ -39,55 +39,53 @@ Class DataUtilities:
     - Passes invalid input - Throws InvalidParameterException
       - Null passed in
 
-  - createNumberArray()
-    - Passes valid input - Returns successful array
-        - Numbers in ranges -(max value of double) to +(max value of double)
-        - Empty array
-        - Normal array
+- createNumberArray()
+  - Passes valid input - Returns successful array
+      - Numbers in ranges -(max value of double) to +(max value of double)
+      - Empty array
+      - Normal array
+  - Passes invalid input - Throws InvalidParameterException
+      - Null passed in
+
+- createNumberArray2D()
+    - Passes valid input - Returns successful column
+      - Numbers in ranges -(max value of double) to +(max value of double)
+      - Empty array
+      - Normal array
+        - Length
     - Passes invalid input - Throws InvalidParameterException
-        - Null passed in
+      - Null passed in
 
-  - createNumberArray2D()
-      - Passes valid input - Returns successful column
-        - Numbers in ranges -(max value of double) to +(max value of double)
-        - Empty array
-        - Normal array
-          - Length
-      - Passes invalid input - Throws InvalidParameterException
-        - Null passed in
-
-getCumulativePercentages()
-Passes valid input - Returns keyed values
-KeyedValues contains one or more positive values
-Passes invalid input - Throws InvalidParameterException
-KeyedValues only contains 0 values
-Null passed in
+- getCumulativePercentages()
+  - Passes valid input - Returns keyed values
+    - KeyedValues contains one or more positive values
+  - Passes invalid input - Throws InvalidParameterException
+    - KeyedValues only contains 0 values
+    - Null passed in
 
 Class Range:
-getLength()
-Assert correct length upper bound > lower bound
-Assert 0 when upper bound == lower bound
-getLowerBound()
-Assert correct lower bound
-getUpperBound()
-Assert correct upper bound
-contains()
-Assert True for number contained in range (lower bound < number < upper bound)
-Assert True for lower boundary of range
-Assert True for upper boundary of range
-Assert False for number < lower bound
-Assert False for number > upper bound
-intersects()
-Pass in lower > upper
-Pass in upper < lower
-Valid Input
-Pass in lower < upper and upper > lower
-Range that does not intersect on left hand side of range
-Range that does not intersect on right hand side of range
-Range that does intersect and is within the bounds
-Range that is equal to the initialized range
-
-
+- getLength()
+  - Assert correct length upper bound > lower bound
+  - Assert 0 when upper bound == lower bound
+- getLowerBound()
+  - Assert correct lower bound
+- getUpperBound()
+  - Assert correct upper bound
+- contains()
+  - Assert True for number contained in range (lower bound < number < upper bound)
+  - Assert True for lower boundary of range
+  - Assert True for upper boundary of range
+  - Assert False for number < lower bound
+  - Assert False for number > upper bound
+- intersects()
+  - Pass in lower > upper
+  - Pass in upper < lower
+  - Valid Input
+    - Pass in lower < upper and upper > lower
+    - Range that does not intersect on left hand side of range
+    - Range that does not intersect on right hand side of range
+    - Range that does intersect and is within the bounds
+    - Range that is equal to the initialized range
 
 # 3 Test cases developed
 
