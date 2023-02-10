@@ -18,7 +18,7 @@ public class CalculateTotal {
 	 * SETUP
 	 */
 	@Before
-	public void init() throws Exception{
+	public void setUp() throws Exception{
 		//create a mockery object for Values2D
 		Mockery mockingContext = new Mockery();
 	    values = mockingContext.mock(Values2D.class);
