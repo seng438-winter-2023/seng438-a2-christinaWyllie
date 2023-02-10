@@ -137,112 +137,114 @@ Class Name: CreateNumberArrayTest
 	Test Case Names: 
   - public void createNumberArrayValidInput()
     - Tests that passing in valid double array containing both positive and negative numbers creates expected Double array
-  - FAIL
-public void createNumberArrayValidInputLength()
-Tests that passing in both positive and negative numbers in an array creates expected length array
-PASS
-public void createNumberArrayLargeInput()
-Tests that passing in largest positive number that can be held in a double creates expected output 
-PASS
-public void createNumberArraySmallInput()
-Tests that passing in largest negative number that can be held in a double creates expected output 
-PASS
-public void createNumberArrayEmptyInput()
-Tests that passing in an empty double[] creates empty Double[]
-PASS
-public void createNumberArrayThrowsInvalidParameterException() 
-Tests that passing in null data argument throws InvalidParameterException 
-FAIL 
-public void createNumberArray2DValidInput()
-Tests that passing in a valid double[][] with both positive and negative numbers creates expected Double[][]
-FAIL
-public void createNumberArray2DCorrectRowsLength()
-Tests that passing in valid double[][] creates Double[][] with correct number of rows
-PASS
-public void createNumberArray2DCorrectColumnsLength()
-Tests that passing in a double[][] creates Double[][] with the correct number of columns
-PASS 
-public void createNumberArray2DEmptyInput()
-Tests that passing in an empty double[][] creates empty Double[][] 
-PASS
-public void createNumberArray2DLargeInput()
-Tests that passing in a double[][] containing largest positive value that can be held in a double creates the expected Double[][] 
-PASS
-public void createNumberArray2DSmallInput()
-Tests that passing in a double[][] containing largest negative value that can be held in a double creates the expected Double[][] 
-PASS
-public void createNumberArray2DThrowsInvalidParameterException() 
-Tests that passing in null data argument throws invalid parameter exception
-FAIL
+    - FAIL
+  - public void createNumberArrayValidInputLength()	
+    - Tests that passing in both positive and negative numbers in an array creates expected length array
+    - PASS
+  - public void createNumberArrayLargeInput()
+    - Tests that passing in largest positive number that can be held in a double creates expected output 
+    - PASS
+  - public void createNumberArraySmallInput()
+    - Tests that passing in largest negative number that can be held in a double creates expected output 
+    - PASS
+  - public void createNumberArrayEmptyInput()
+    - Tests that passing in an empty double[] creates empty Double[]
+    - PASS
+  - public void createNumberArrayThrowsInvalidParameterException() 
+    - Tests that passing in null data argument throws InvalidParameterException 
+    - FAIL 
+  - public void createNumberArray2DValidInput()
+    - Tests that passing in a valid double[][] with both positive and negative numbers creates expected Double[][]
+    - FAIL
+  - public void createNumberArray2DCorrectRowsLength()
+    - Tests that passing in valid double[][] creates Double[][] with correct number of rows
+    - PASS
+  - public void createNumberArray2DCorrectColumnsLength()
+    - Tests that passing in a double[][] creates Double[][] with the correct number of columns
+    - PASS 
+  - public void createNumberArray2DEmptyInput()
+    - Tests that passing in an empty double[][] creates empty Double[][] 
+    - PASS
+  - public void createNumberArray2DLargeInput()
+    - Tests that passing in a double[][] containing largest positive value that can be held in a double creates the expected Double[][] 
+    - PASS
+  - public void createNumberArray2DSmallInput()
+    - Tests that passing in a double[][] containing largest negative value that can be held in a double creates the expected Double[][] 
+    - PASS
+  - public void createNumberArray2DThrowsInvalidParameterException() 
+    - Tests that passing in null data argument throws invalid parameter exception
+    - FAIL
 
 Class Name: CalculateTotalTest
 	Test Case Names
-public void calculateColumnWithLowerBound() 
-Tests that passing in the lower bound returns the correct sum of columns with that index. 
-Pass.
-public void calculateColumnWithAboveLowerBound()
-Tests that passing in an in-between value returns the correct sum of columns with that index
-PASS
-public void calculateColumnWithUpperBound()
-Tests that passing in the upper bound returns the correct sum of columns with that index
-PASS
-public void calculateColumnWithNegativeValues()
-Tests that negative values get added up correctly
-PASS
-public void calculateColumnWithNullData()
-Tests that passing in null throws correct exception
-FAIL
-public void calculateRowWithLowerBound()
-Tests that passing in the lower bound returns the correct sum of columns with that index
-FAIL
-public void calculateRowWithAboveLowerBound()
-Tests that passing in an in-between value returns the correct sum of columns with that index
-FAIL
-public void calculateRowWithUpperBound()
-Tests that passing in the upper bound returns the correct sum of columns with that index
-FAIL
-public void calculateRowWithNullData()
-Tests that passing in null throws correct exception
-FAIL
-public void calculateRowWithNegativeValues()
-Tests that negative values get added up correctly
-FAIL
+  - public void calculateColumnWithLowerBound() 
+    - Tests that passing in the lower bound returns the correct sum of columns with that index 
+    - Pass
+  - public void calculateColumnWithAboveLowerBound()
+    - Tests that passing in an in-between value returns the correct sum of columns with that index
+    - PASS
+  - public void calculateColumnWithUpperBound()
+    - Tests that passing in the upper bound returns the correct sum of columns with that index
+    - PASS
+  - public void calculateColumnWithNegativeValues()
+    - Tests that negative values get added up correctly
+    - PASS
+  - public void calculateColumnWithNullData()
+    - Tests that passing in null throws correct exception
+    - FAIL
+  - public void calculateRowWithLowerBound()
+    - Tests that passing in the lower bound returns the correct sum of columns with that index
+    - FAIL
+  - public void calculateRowWithAboveLowerBound()
+    - Tests that passing in an in-between value returns the correct sum of columns with that index
+    - FAIL
+  - public void calculateRowWithUpperBound()
+    - Tests that passing in the upper bound returns the correct sum of columns with that index
+    - FAIL
+  - public void calculateRowWithNullData()
+    - Tests that passing in null throws correct exception
+    - FAIL
+  - public void calculateRowWithNegativeValues()
+    - Tests that negative values get added up correctly
+    - FAIL
+
+
 Class Name: RangeTest
 	Test Case Names
-setUp()
-public void lowerBoundRange() 
-testing method getLowerBound() for case where upper bound != lower bound
-PASS
-public void lowerBoundEqualRange()
-testing method getLowerBound() for case where upper bound == lower bound
-PASS
-public void upperBoundRange() 
-testing method getUpperBound() for case where upper bound != lower bound
-FAIL
-public void upperBoundEqualRange()
-testing method getUpperBound() for case where upper bound == lower bound
-PASS
-public void lengthRange() 
-testing method getLength() for range with length greater than 0
-PASS
-public void lengthEqualRange()
-testing method getLength() for range with length equal to 0
-PASS
-public void rangeContainsValueInRange()
-testing method contains() for valid value between boundary
-PASS
-public void rangeContainsLowerBound()
-testing method contains() for valid value on lower boundary
-PASS
-public void rangeContainsUpperBound()
-testing method contains() for valid value on upper boundary
-PASS
-public void rangeContainsPastLowerBound() 
-testing method contains() for invalid value outside lower boundary
-PASS
-public void rangeContainsPastUpperBound()
-testing method contains() for invalid value outside upper boundary
-PASS
+  - setUp()
+  - public void lowerBoundRange() 
+    - testing method getLowerBound() for case where upper bound != lower bound
+    - PASS
+  - public void lowerBoundEqualRange()
+    - testing method getLowerBound() for case where upper bound == lower bound
+    - PASS
+  - public void upperBoundRange() 
+    - testing method getUpperBound() for case where upper bound != lower bound
+    - FAIL
+  - public void upperBoundEqualRange()
+    - testing method getUpperBound() for case where upper bound == lower bound
+    - PASS
+  - public void lengthRange() 
+    - testing method getLength() for range with length greater than 0
+    - PASS
+  - public void lengthEqualRange()
+    - testing method getLength() for range with length equal to 0
+    - PASS
+  - public void rangeContainsValueInRange()
+    - testing method contains() for valid value between boundary
+    - PASS
+  - public void rangeContainsLowerBound()
+    - testing method contains() for valid value on lower boundary
+    - PASS
+  - public void rangeContainsUpperBound()
+    - testing method contains() for valid value on upper boundary
+    - PASS
+  - public void rangeContainsPastLowerBound() 
+    - testing method contains() for invalid value outside lower boundary
+    - PASS
+  - public void rangeContainsPastUpperBound()
+    - testing method contains() for invalid value outside upper boundary
+    - PASS
 
 
 # 4 How the team work/effort was divided and managed
