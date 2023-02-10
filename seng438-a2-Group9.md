@@ -39,22 +39,22 @@ Class DataUtilities:
     - Passes invalid input - Throws InvalidParameterException
       - Null passed in
 
-createNumberArray()
-Passes valid input - Returns successful array
-Numbers in ranges -(max value of double) to +(max value of double)
-Empty array
-Normal array
-Passes invalid input - Throws InvalidParameterException
-Null passed in
+  - createNumberArray()
+    - Passes valid input - Returns successful array
+        - Numbers in ranges -(max value of double) to +(max value of double)
+        - Empty array
+        - Normal array
+    - Passes invalid input - Throws InvalidParameterException
+        - Null passed in
 
-createNumberArray2D()
-Passes valid input - Returns successful column
-Numbers in ranges -(max value of double) to +(max value of double)
-Empty array
-Normal array
-Length
-Passes invalid input - Throws InvalidParameterException
-Null passed in
+  - createNumberArray2D()
+      - Passes valid input - Returns successful column
+        - Numbers in ranges -(max value of double) to +(max value of double)
+        - Empty array
+        - Normal array
+          - Length
+      - Passes invalid input - Throws InvalidParameterException
+        - Null passed in
 
 getCumulativePercentages()
 Passes valid input - Returns keyed values
