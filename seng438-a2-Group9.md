@@ -98,7 +98,9 @@ you have explained in the test strategy section //above
 
 # 4 How the team work/effort was divided and managed
 
-Text…
+The team worked together as a group of 4 to create a thorough test plan, taking each method and writing an outline for every test to be conducted. Each member then took a few methods each and wrote the tests for those methods, writing cases for Boundary Values and Equivalence Classes. Christina worked on calculateRowTotal and CalculateColumnTotal. Sobia worked on createNumberArray and createNumberArray2D, Maitry worked on getCumulativePercentage and intersects (in the range class), and Jamie worked on getLength, getLowerBound, getUpperBound, and contains in the range class. The data utilities classes were divided into 3 different test class files: 1 for column and row total, 1 for number array and 2D number array, and one for cumulative percentage. The range class contains 2 test class files: 1 for the getter and contains tests, and one for the intersects tests. 
+
+The lessons on teamwork we learned from this lab were that while dividing up work makes it easier to complete, it also causes difficulties in understanding what other group members have done for their test cases. It also makes it more difficult to help out other group members when they run into bugs and errors.  
 
 # 5 Difficulties encountered, challenges overcome, and lessons learned
 
