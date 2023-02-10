@@ -9,7 +9,7 @@ import java.security.*;
 
 import org.jfree.data.*;
 
-public class CalculateTotal {
+public class CalculateTotalTests {
 	
 	private Values2D values;
 
@@ -77,7 +77,7 @@ public class CalculateTotal {
 		//calculating the total in column 0, the lower bound 
 		double result = DataUtilities.calculateColumnTotal(values, 0);
 		// verify
-	    assertEquals(9.0, result, .000000001d);
+	    assertEquals("calculated column total should be 9.0", 9.0, result, .000000001d);
 	}
 	
 	@Test
@@ -85,7 +85,7 @@ public class CalculateTotal {
 		//calculating the total in column 1, below upper bound and above upper bound
 		double result = DataUtilities.calculateColumnTotal(values, 1);
 		// verify
-	    assertEquals(13.5, result, .000000001d);
+	    assertEquals("calculated column total should be 13.5", 13.5, result, .000000001d);
 	}
 	
 	@Test
@@ -93,7 +93,7 @@ public class CalculateTotal {
 		//calculating the total in column 2, the upper bound
 		double result = DataUtilities.calculateColumnTotal(values, 2);
 		// verify
-	    assertEquals(17.1, result, .000000001d);
+	    assertEquals("calculated column total should be 17.1", 17.1, result, .000000001d);
 	}
 	
 	@Test
@@ -128,30 +128,10 @@ public class CalculateTotal {
 	         
 	    double result = DataUtilities.calculateColumnTotal(val, 0);
 		// verify
-	    assertEquals(-3.3, result, .000000001d);
+	    assertEquals("Calculated column total should equal -3.3", -3.3, result, .000000001d);
 	}
 	
-//	@Test 
-//	public void calculateColumnWithBelowLowerBound(){
-//		
-//		double result = DataUtilities.calculateColumnTotal(values, -1);
-//		//verify
-//		assertEquals(0, result, .000000001d);
-//	}
-	
-//	@Test
-//	public void calculateColumnWithAboveUpperBound(){
-//		double result = DataUtilities.calculateColumnTotal(values, 3);
-//		assertEquals(0.0, result, .000000001d);
-//	}
-	
-//	@Test 
-//	public void calculateColumnWithDouble(){
-//		//calculating the total with invalid input, a double for column
-//		double result = DataUtilities.calculateColumnTotal(values, 1.0);
-//		//verify
-//		assertEquals(0, result, .000000001d);
-//	}
+
 	
 	@Test 
 	public void calculateColumnWithNullData(){
@@ -160,15 +140,13 @@ public class CalculateTotal {
 			//calculating the total with invalid input, null data
 			double result = DataUtilities.calculateColumnTotal(val, 1);
 		}
-		
-		//if InvalidParameterException is caught, then the correct exception was thrown
 		catch(InvalidParameterException e) {
+			//if InvalidParameterException is caught, then the correct exception was thrown
 			assertTrue(true);
 		}
-		
-		//else, should fail
 		catch(Exception e) {
-			fail();
+			//else, should fail
+			fail("InvalidParameterException was not caught");
 		}
 	}
 	
@@ -180,15 +158,15 @@ public class CalculateTotal {
 		//calculating the total in row 0, the lower bound 
 		double result = DataUtilities.calculateRowTotal(values, 0);
 		// verify
-	    assertEquals(8.3, result, .000000001d);
+	    assertEquals("calculated row total should be 8.3", 8.3, result, .000000001d);
 	}
 	
 	@Test
 	public void calculateRowWithAboveLowerBound() {
-		//calculating the total in row 2. below upper bound and above lower bound
+		//calculating the total in row 1. below upper bound and above lower bound
 		double result = DataUtilities.calculateRowTotal(values, 1);
 		// verify
-	    assertEquals(9.5, result, .000000001d);
+	    assertEquals("calculated row total should be 9.5", 9.5, result, .000000001d);
 	}
 	
 	@Test
@@ -196,30 +174,8 @@ public class CalculateTotal {
 		//calculating the total in row 2. upper bound
 		double result = DataUtilities.calculateRowTotal(values, 2);
 		// verify
-	    assertEquals(21.8, result, .000000001d);
+	    assertEquals("calculated row total should be 21.8", 21.8, result, .000000001d);
 	}
-	
-//	@Test 
-//	public void calculateRowWithBelowLowerBound(){
-//		
-//		double result = DataUtilities.calculateRowTotal(values, -1);
-//		//verify
-//		assertEquals(0, result, .000000001d);
-//	}
-	
-//	@Test
-//	public void calculateRowWithAboveUpperBound(){
-//		double result = DataUtilities.calculateRowTotal(values, 3);
-//		assertEquals(0.0, result, .000000001d);
-//	}
-	
-//	@Test 
-//	public void calculateRowWithDouble(){
-//		//calculating the total with invalid input, a double for row
-//		double result = DataUtilities.calculateRowTotal(values, 1.0);
-//		//verify
-//		assertEquals(0, result, .000000001d);
-//	}
 	
 	@Test 
 	public void calculateRowWithNullData(){
@@ -228,15 +184,13 @@ public class CalculateTotal {
 			//calculating the total with invalid input, null data
 			double result = DataUtilities.calculateRowTotal(val, 1);
 		}
-		
-		//if InvalidParameterException is caught, then the correct exception was thrown
 		catch(InvalidParameterException e) {
+			//if InvalidParameterException is caught, then the correct exception was thrown
 			assertTrue(true);
 		}
-		
-		//else, the test fails
 		catch(Exception e) {
-			fail();
+			//else, the test fails
+			fail("InvalidParameterException was not caught");
 		}
 		
 	}
@@ -252,10 +206,10 @@ public class CalculateTotal {
 	    mockingContext2.checking(new Expectations() {
 	        {
 	            one(val).getRowCount();
-	            //three rows
+	            //one row
 	            will(returnValue(1));
 	            one(val).getColumnCount();
-	            //one column
+	            //three columns
 	            will(returnValue(3));
 	            
 	            //populate 0th row
@@ -273,7 +227,7 @@ public class CalculateTotal {
 	         
 	    double result = DataUtilities.calculateRowTotal(val, 0);
 		// verify
-	    assertEquals(-3.3, result, .000000001d);
+	    assertEquals("Calculated row total should equal -3.3", -3.3, result, .000000001d);
 	}
 
 
