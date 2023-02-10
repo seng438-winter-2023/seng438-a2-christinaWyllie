@@ -93,45 +93,46 @@ Class Range:
 A total of 5 test classes were implemented. This is done in order to not only divide test cases by the classes and methods they belong to but also by who is writing them. 
 
 Class Name: GetCumulativePercentageTest
-  Test Case Names: 
-    - public void validCumulativePercentage()
-      - Tests valid positive values and ensures the proper percentages are calculated 
-      - PASS
-    - public void invalidCumulativePercentageNull()
-      - Creates a KeyedValues object that is initialized to null. An invalid parameter exception should be thrown
-      - FAIL
-    - public void invalidCumulativePercentage0()
-       - Creates a KeyedValues object that is initialized to 0. An invalid parameter exception should be thrown
-       - PASS
+	Test Case Names: 
+  - public void validCumulativePercentage()
+    - Tests valid positive values and ensures the proper percentages are calculated 
+    - PASS
+  - public void invalidCumulativePercentageNull()
+    - Creates a KeyedValues object that is initialized to null. An invalid parameter exception should be thrown
+    - FAIL
+  - public void invalidCumulativePercentage0()
+    - Creates a KeyedValues object that is initialized to 0. An invalid parameter exception should be thrown
+    - PASS
+
         
  Class Name: IntersectsRangeTest
 	Test Case Names: 
-    - public void intersectInvalidLowerBound()
-        - Sends a lower bound that is greater than the upper bound 
-        - Assumption: An assumption is made that this data will intersect because if the bounds were switched it would return true
-        - FAIL
-    - public void intersectInvalidUpperBound()
-        - Sends a upper bound that is greater than the lower bound 
-        - An assumption is made that this data will intersect because if the bounds were switched it would return true
-        - FAIL
-    - public void intersectWithinRange()
-        - When given bound that is within the mock range the test passes
-        - PASS
-    - public void intersectIsRange()
-        - When given bound that is the mock range 
-        - PASS
-    - public void intersectOverlappingLowerBound()
-        - Lower bound given is within the range but the upper bound is not
-        - FAIL
-    - public void intersectOverlappingUpperBound()
-        - Upper bound given is within the range but the lower bound is not
-        - PASS
-    - public void intersectNoOverlappingBoundLHS()
-        - Neither the upper or lower bound should overlap with the given range on the left hand side of range
-        - FAIL
-    - public void intersectNoOverlappingBoundRHS()
-        - Neither the upper or lower bound should overlap with the given range on the right hand side range
-        - PASS
+  - public void intersectInvalidLowerBound()
+    - Sends a lower bound that is greater than the upper bound 
+    - Assumption: An assumption is made that this data will intersect because if the bounds were switched it would return true
+    - FAIL
+  - public void intersectInvalidUpperBound()
+    - Sends a upper bound that is greater than the lower bound 
+    - An assumption is made that this data will intersect because if the bounds were switched it would return true
+    - FAIL
+  - public void intersectWithinRange()
+    - When given bound that is within the mock range the test passes
+    - PASS
+  - public void intersectIsRange()
+      - When given bound that is the mock range 
+      - PASS
+  - public void intersectOverlappingLowerBound()
+      - Lower bound given is within the range but the upper bound is not
+      - FAIL
+  - public void intersectOverlappingUpperBound()
+      - Upper bound given is within the range but the lower bound is not
+      - PASS
+  - public void intersectNoOverlappingBoundLHS()
+      - Neither the upper or lower bound should overlap with the given range on the left hand side of range
+      - FAIL
+  - public void intersectNoOverlappingBoundRHS()
+      - Neither the upper or lower bound should overlap with the given range on the right hand side range
+      - PASS
 
 Class Name: CreateNumberArrayTest
 	Test Case Names: 
