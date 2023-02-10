@@ -11,7 +11,7 @@
 
 # 1 Introduction
 
-Text…
+This assignment focuses on unit testing a black box program. Given a program and documentation, a team of 4 analyzed requirements and created automated unit tests to ensure the application was running as expected. The unit tests are developed on Eclipse in Java using the JUnit library. In addition to learning syntax related to unit testing and JUnit, the team also had to develop their own mocks and stubs. 
 
 # 2 Detailed description of unit test strategy
 
