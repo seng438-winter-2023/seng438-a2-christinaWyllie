@@ -5,8 +5,6 @@ import static org.junit.Assert.*; import org.jfree.data.Range; import org.junit.
 public class RangeTest {
     private Range exampleRange;
     private Range exampleEqualRange;
-    @BeforeClass public static void setUpBeforeClass() throws Exception {
-    }
 
 
     @Before
@@ -18,49 +16,49 @@ public class RangeTest {
     //testing method getLowerBound() for case where upper bound != lower bound
     @Test
     public void lowerBoundRange() {
-    	assertEquals("The lower bound of -1 and 1 should be -1",
+    	assertEquals("Lower bound of -1 and 1 ",
     	-1, exampleRange.getLowerBound(), .000000001d);
     }
     
     //testing method getLowerBound() for case where upper bound == lower bound
     @Test
     public void lowerBoundEqualRange() {
-    	assertEquals("The lower bound of 1 and 1 should be 1",
+    	assertEquals("Lower bound of 1 and 1 ",
     	1, exampleEqualRange.getLowerBound(), .000000001d);
     }
     
     //testing method getUpperBound() for case where upper bound != lower bound
     @Test
     public void upperBoundRange() {
-    	assertEquals("The upper bound of -1 and 1 should be 1",
+    	assertEquals("Upper bound of -1 and 1 ",
     	1, exampleRange.getUpperBound(), .000000001d);
     }
     
     //testing method getUpperBound() for case where upper bound == lower bound
     @Test
     public void upperBoundEqualRange() {
-    	assertEquals("The upper bound of 1 and 1 should be 1",
+    	assertEquals("Upper bound of 1 and 1 ",
     	1, exampleEqualRange.getUpperBound(), .000000001d);
     }
     
     //testing method getLength() for range with length greater than 0
     @Test
     public void lengthRange() {
-    	assertEquals("The length of range -1 and 1 should be 2",
+    	assertEquals("Length of range -1 and 1 ",
     	2, exampleRange.getLength(), .000000001d);
     }
     
     //testing method getLength() for range with length 0
     @Test
     public void lengthEqualRange() {
-    	assertEquals("The length of range 1 and 1 should be 0",
+    	assertEquals("Length of range 1 and 1 ",
     	0, exampleEqualRange.getLength(), .000000001d);
     }
     
     //testing method contains() for valid value between boundary
     @Test
     public void rangeContainsValueInRange() {
-    	assertTrue("The range of -1 to 1 contains 0 ",
+    	assertTrue("Range of -1 to 1 contains 0 ",
     	exampleRange.contains(0));
     }
     
@@ -92,12 +90,4 @@ public class RangeTest {
     	exampleRange.contains(1.5));
     }
     
-
-    @After
-    public void tearDown() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-    }
 }
