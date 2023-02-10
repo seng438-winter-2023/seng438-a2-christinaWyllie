@@ -19,7 +19,7 @@ The team is testing all 5 methods in the data utilities class and 5 methods from
 We used a combination of boundary value testing and equivalence class testing to design our test cases.
 
 Class DataUtilities:
-- calculateColumnTotal()
+  - calculateColumnTotal()
   - Passes valid input - Returns successful column
     - column == 0 
     - column == data.getColumnCount 
@@ -95,14 +95,14 @@ A total of 5 test classes were implemented. This is done in order to not only di
 Class Name: GetCumulativePercentageTest
   Test Case Names: 
     - public void validCumulativePercentage()
-        - Tests valid positive values and ensures the proper percentages are calculated 
-        - PASS
+      - Tests valid positive values and ensures the proper percentages are calculated 
+      - PASS
     - public void invalidCumulativePercentageNull()
-        - Creates a KeyedValues object that is initialized to null. An invalid parameter exception should be thrown
-        - FAIL
+      - Creates a KeyedValues object that is initialized to null. An invalid parameter exception should be thrown
+      - FAIL
     - public void invalidCumulativePercentage0()
-        - Creates a KeyedValues object that is initialized to 0. An invalid parameter exception should be thrown
-        - PASS
+       - Creates a KeyedValues object that is initialized to 0. An invalid parameter exception should be thrown
+       - PASS
         
  Class Name: IntersectsRangeTest
 	Test Case Names: 
