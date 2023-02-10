@@ -1,4 +1,4 @@
-package org.jfree.data.DataUtilitiesTests;
+package org.jfree.data.CreateNumberArrayTest;
 
 import static org.junit.Assert.*;
 import org.jfree.data.DataUtilities;
@@ -12,7 +12,7 @@ import java.security.InvalidParameterException;
  *
  */
 
-public class DataUtilitiesTests {
+public class CreateNumberArrayTest {
 
 	private Number[] myNumberArray;
 	private Number[][] myNumberArray2D;
@@ -64,7 +64,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArrayValidInputTest() 
+	public void createNumberArrayValidInput() 
 	{
 		Double[] expectedDoubleArray = {-12356015.0, 1.0, 2.01, 50000000.0};
 		assertArrayEquals(expectedDoubleArray, myNumberArray);
@@ -75,7 +75,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArrayValidInputLengthTest() 
+	public void createNumberArrayValidInputLength() 
 	{
 		Double[] expectedDoubleArray = {-12356015.0, 1.0, 2.01, 50000000.0};
 		assertEquals(expectedDoubleArray.length, myNumberArray.length);
@@ -86,7 +86,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArrayLargeInputTest() 
+	public void createNumberArrayLargeInput() 
 	{
 		Double[] expectedDoubleArray = {Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE};
 		double[] inputArray = {Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE, Double.MAX_VALUE};
@@ -99,7 +99,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArraySmallInputTest() 
+	public void createNumberArraySmallInput() 
 	{
 		Double[] expectedDoubleArray = {Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE};
 		double[] inputArray = {Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE, Double.MIN_VALUE};
@@ -112,7 +112,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArrayEmptyInputTest()
+	public void createNumberArrayEmptyInput()
 	{
 		double[] emptyArray = {};
 		Double[] expectedDoubleArray = {};
@@ -129,7 +129,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test //(expected = InvalidParameterException.class)
-	public void createNumberArrayThrowsInvalidParameterExceptionTest() throws InvalidParameterException
+	public void createNumberArrayThrowsInvalidParameterException() // throws InvalidParameterException
 	{	
 		try 
 		{
@@ -156,7 +156,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DValidInputTest() 
+	public void createNumberArray2DValidInput() 
 	{
 		Double[][] expected2DDoubleArray = {{-12356015.0}, {1.0, 2.01}, {50000000.0}};
 		assertArrayEquals(expected2DDoubleArray, myNumberArray2D);
@@ -167,7 +167,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DCorrectRowsTest() 
+	public void createNumberArray2DCorrectRows() 
 	{
 		Double[][] expected2DDoubleArray = {{-12356015.0}, {1.0, 2.01}, {50000000.0}};
 		assertEquals(expected2DDoubleArray.length, myNumberArray2D.length);
@@ -178,7 +178,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DCorrectColumnsTest() 
+	public void createNumberArray2DCorrectColumns() 
 	{
 		Double[][] expected2DDoubleArray = {{-12356015.0}, {1.0, 2.01}, {50000000.0}};
 		for(int i = 0; i < expected2DDoubleArray.length; i++)
@@ -192,7 +192,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DEmptyInputTest()
+	public void createNumberArray2DEmptyInput()
 	{
 		double[][] empty2DArray = {{}, {}, {}};
 		Double[][] expected2DDoubleArray = {{}, {}, {}};
@@ -205,7 +205,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DLargeInputTest() 
+	public void createNumberArray2DLargeInput() 
 	{
 		Double[][] expected2DDoubleArray = {{Double.MAX_VALUE, Double.MAX_VALUE}, {Double.MAX_VALUE}, {Double.MAX_VALUE}};
 		double[][] inputArray = {{Double.MAX_VALUE, Double.MAX_VALUE}, {Double.MAX_VALUE}, {Double.MAX_VALUE}};
@@ -218,7 +218,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test
-	public void createNumberArray2DSmallInputTest() 
+	public void createNumberArray2DSmallInput() 
 	{
 		Double[][] expected2DDoubleArray = {{Double.MIN_VALUE, Double.MIN_VALUE}, {Double.MIN_VALUE}, {Double.MIN_VALUE}};
 		double[][] inputArray = {{Double.MIN_VALUE, Double.MIN_VALUE}, {Double.MIN_VALUE}, {Double.MIN_VALUE}};
@@ -235,7 +235,7 @@ public class DataUtilitiesTests {
 	 */
 	
 	@Test //(expected = InvalidParameterException.class)
-	public void createNumberArray2DThrowsExceptionTest() 
+	public void createNumberArray2DThrowsInvalidParameterException() 
 	{
 		try
 		{
