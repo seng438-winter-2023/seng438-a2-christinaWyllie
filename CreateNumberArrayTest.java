@@ -225,14 +225,14 @@ public class CreateNumberArrayTest {
 				
 		try
 		{
-			// Invalid data according to documnetation is null, should throw invalid parameter exception
+			// Invalid data according to documentation is null, should throw invalid parameter exception
 			double[][] invalidArray = null;
 			myNumberArray2D = DataUtilities.createNumberArray2D(invalidArray);
 		}
 		
 		catch (InvalidParameterException e)
 		{
-			// If invaild parameter excetion is thrown, assert that test passes 
+			// If invalid parameter exception is thrown, assert that test passes 
 			assertTrue(true);
 		}
 		
