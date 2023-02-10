@@ -91,7 +91,7 @@ public class CalculateTotalTests {
 		//calculating the total in column 0, the lower bound 
 		double result = DataUtilities.calculateColumnTotal(values, 0);
 		// verify
-	    assertEquals("calculated column total with lower bound", 9.0, result, .000000001d);
+	    assertEquals("Calculated column total with lower bound", 9.0, result, .000000001d);
 	}
 	
 	@Test
@@ -99,7 +99,7 @@ public class CalculateTotalTests {
 		//calculating the total in column 1, below upper bound and above upper bound
 		double result = DataUtilities.calculateColumnTotal(values, 1);
 		// verify
-	    assertEquals("calculated column total for column 1", 13.5, result, .000000001d);
+	    assertEquals("Calculated column total for column 1", 13.5, result, .000000001d);
 	}
 	
 	@Test
@@ -107,7 +107,7 @@ public class CalculateTotalTests {
 		//calculating the total in column 2, the upper bound
 		double result = DataUtilities.calculateColumnTotal(values, 2);
 		// verify
-	    assertEquals("calculated column total with upper bound", 17.1, result, .000000001d);
+	    assertEquals("Calculated column total with upper bound", 17.1, result, .000000001d);
 	}
 	
 	@Test
@@ -142,7 +142,7 @@ public class CalculateTotalTests {
 	         
 	    double result = DataUtilities.calculateColumnTotal(val, 0);
 		// verify
-	    assertEquals("Calculated column total with negative values, -3.3, result, .000000001d);
+	    assertEquals("Calculated column total with negative values", -3.3, result, .000000001d);
 	}
 	
 
@@ -172,7 +172,7 @@ public class CalculateTotalTests {
 		//calculating the total in row 0, the lower bound 
 		double result = DataUtilities.calculateRowTotal(values, 0);
 		// verify
-	    assertEquals("calculated row total with lower bound", 8.3, result, .000000001d);
+	    assertEquals("Calculated row total with lower bound", 8.3, result, .000000001d);
 	}
 	
 	@Test
@@ -180,7 +180,7 @@ public class CalculateTotalTests {
 		//calculating the total in row 1. below upper bound and above lower bound
 		double result = DataUtilities.calculateRowTotal(values, 1);
 		// verify
-	    assertEquals("calculated row total for row 1", 9.5, result, .000000001d);
+	    assertEquals("Calculated row total for row 1", 9.5, result, .000000001d);
 	}
 	
 	@Test
@@ -188,7 +188,7 @@ public class CalculateTotalTests {
 		//calculating the total in row 2. upper bound
 		double result = DataUtilities.calculateRowTotal(values, 2);
 		// verify
-	    assertEquals("calculated row total with upper bound", 21.8, result, .000000001d);
+	    assertEquals("Calculated row total with upper bound", 21.8, result, .000000001d);
 	}
 	
 	@Test 
