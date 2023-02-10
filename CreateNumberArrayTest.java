@@ -1,4 +1,4 @@
-package org.jfree.data.CreateNumberArrayTest;
+package org.jfree.data.test;
 
 import static org.junit.Assert.*;
 import org.jfree.data.DataUtilities;
