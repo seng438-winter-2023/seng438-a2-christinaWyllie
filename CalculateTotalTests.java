@@ -1,3 +1,17 @@
+/*
+Class: SENG 438
+
+File: CalculateTotalTest/java
+Purpose: Test the calculateColumnTotal and calculateRowTotal method in the class DataUtilities. 
+
+# of Tests: 10
+Failures: 6
+
+Author: Christina Wyllie
+Date: Feb 9, 2023
+
+*/
+
 package org.jfree.data.test;
 
 import static org.junit.Assert.*;
