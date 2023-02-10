@@ -33,7 +33,7 @@ public class CreateNumberArrayTest {
 	
 //CreateNumberArray Tests 
 	
-	/* Equivalence Class Test: Test that valid double[] input creates correct
+	/* Equivalence Class Test: Test that valid double[] input creates expected
 	 * Double[] output.
 	 */
 	
@@ -44,7 +44,7 @@ public class CreateNumberArrayTest {
 		assertArrayEquals(expectedDoubleArray, myNumberArray);
 	}
 	
-	/* Equivalence Class Test: Test that valid double[] input creates correct
+	/* Equivalence Class Test: Test that valid double[] input creates expected
 	 * length Double[] output.
 	 */
 	
@@ -56,7 +56,8 @@ public class CreateNumberArrayTest {
 	}
 	
 	/* Boundary Value Test: When given max value that can be held in a double
-	 * correct Number array is created
+	 * expected Number array is created. Ensure that variables can hold largest 
+	 * positive number without variables overflowing. 
 	 */
 	
 	@Test
@@ -69,7 +70,8 @@ public class CreateNumberArrayTest {
 	}
 	
 	/* Boundary Value Test: When given the largest negative number that can be held in a double
-	 * correct number array is created 
+	 * expected number array is created. Ensure that variables can hold largest negative double number
+	 * without overflowing. 
 	 */
 	
 	@Test
@@ -82,7 +84,8 @@ public class CreateNumberArrayTest {
 	}
 	
 	/* Equivalence Class Test: Pass in empty double array as input and test that 
-	 * empty Double array created 
+	 * empty Double array created. Empty double[] is valid input according to documentation
+	 * and should create expected Double[].
 	 */
 	
 	@Test
@@ -150,7 +153,7 @@ public class CreateNumberArrayTest {
 		assertEquals(expected2DDoubleArray.length, myNumberArray2D.length);
 	}
 	
-	/* Equivalence Class Test: Test that array created has the correct 
+	/* Equivalence Class Test: Test that array created has the expected 
 	 * number of columns for each row
 	 */
 	
@@ -165,7 +168,8 @@ public class CreateNumberArrayTest {
 	}
 	
 	/* Equivalence Class Test: Pass in empty double[][] as input and test that 
-	 * empty Double array created 
+	 * empty Double array created. Empty double[][] is valid input and should 
+	 * create valid Number array.
 	 */
 	
 	@Test
@@ -178,7 +182,8 @@ public class CreateNumberArrayTest {
 	}
 
 	/* Boundary Value Test: When given max value that can be held in a double
-	 * correct Number array is created
+	 * correct Number array is created, ensure that variables inside createNumberArray can hold 
+	 * correct amount of precision. 
 	 */
 	
 	@Test
@@ -191,7 +196,8 @@ public class CreateNumberArrayTest {
 	}
 	
 	/* Boundary Value Test: When given the largest negative number that can be held in a double
-	 * correct number array is created 
+	 * correct number array is created, ensure that variables inside createNumberArray can hold 
+	 * correct amount of precision. 
 	 */
 	
 	@Test
@@ -219,17 +225,20 @@ public class CreateNumberArrayTest {
 				
 		try
 		{
+			// Invalid data according to documnetation is null, should throw invalid parameter exception
 			double[][] invalidArray = null;
 			myNumberArray2D = DataUtilities.createNumberArray2D(invalidArray);
 		}
 		
 		catch (InvalidParameterException e)
 		{
+			// If invaild parameter excetion is thrown, assert that test passes 
 			assertTrue(true);
 		}
 		
 		catch (Exception e)
 		{
+			// If any other exception is thrown test fails 
 			fail();
 		}
 	}
