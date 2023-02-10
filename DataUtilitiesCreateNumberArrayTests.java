@@ -16,24 +16,6 @@ public class CreateNumberArrayTest {
 
 	private Number[] myNumberArray;
 	private Number[][] myNumberArray2D;
-	
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception 
-	{
-		
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception 
-	{
-		
-	}
 
 	/**
 	 * @throws java.lang.Exception
