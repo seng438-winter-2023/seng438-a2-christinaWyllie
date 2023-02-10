@@ -16,6 +16,7 @@ public class CreateNumberArrayTest {
 
 	private Number[] myNumberArray;
 	private Number[][] myNumberArray2D;
+	
 
 	/**
 	 * @throws java.lang.Exception
@@ -28,15 +29,6 @@ public class CreateNumberArrayTest {
 		
 		double[][] my2DDoubleArray = {{-12356015.0}, {1, 2.01}, {50000000}};
 		myNumberArray2D = DataUtilities.createNumberArray2D(my2DDoubleArray);
-	}
-
-	/**
-	 * @throws java.lang.Exception
-	 */
-	@After
-	public void tearDown() throws Exception 
-	{
-		
 	}
 	
 //CreateNumberArray Tests 
@@ -111,8 +103,11 @@ public class CreateNumberArrayTest {
 	 */
 	
 	@Test //(expected = InvalidParameterException.class)
-	public void createNumberArrayThrowsInvalidParameterException() // throws InvalidParameterException
+	public void createNumberArrayThrowsInvalidParameterException() //throws InvalidParameterException
 	{	
+		// TA: Shohug 
+		// Confirmed that try catch is okay for checking whether or not invalid parameter exception is thrown
+		
 		try 
 		{
 			double[] invalidArray = null;
@@ -217,8 +212,11 @@ public class CreateNumberArrayTest {
 	 */
 	
 	@Test //(expected = InvalidParameterException.class)
-	public void createNumberArray2DThrowsInvalidParameterException() 
+	public void createNumberArray2DThrowsInvalidParameterException() //throws InvalidParameterException
 	{
+		// TA: Shohug 
+		// Confirmed that try catch is okay for checking whether or not invalid parameter exception is thrown
+				
 		try
 		{
 			double[][] invalidArray = null;
