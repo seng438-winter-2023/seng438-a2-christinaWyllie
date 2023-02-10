@@ -18,26 +18,26 @@ This assignment focuses on unit testing a black box program. Given a program and
 The team is testing all 5 methods in the data utilities class and 5 methods from Range: intersects(), contains(), getLength(), getLowerBound(), getUpperBound().
 
 Class DataUtilities:
-calculateColumnTotal()
-Passes valid input - Returns successful column
-column == 0 
-column == data.getColumnCount 
-0 < column < data.getColumnCount
-Creating Values2D object:
-Negative values
-Positive values
-Passes invalid input - Throws InvalidParameterException
-Null passed in
-calculateRowTotal()
-Passes valid input - Returns successful column
-row== 0 
-Row == data.getRowCount -1
-0<row<data.getRowCount -1
-Creating Values2D object:
-Negative values
-Positive values
-Passes invalid input - Throws InvalidParameterException
-Null passed in
+- calculateColumnTotal()
+  - Passes valid input - Returns successful column
+    - column == 0 
+    - column == data.getColumnCount 
+    - 0 < column < data.getColumnCount
+  -Creating Values2D object:
+    - Negative values
+    - Positive values
+  - Passes invalid input - Throws InvalidParameterException
+      - Null passed in
+- calculateRowTotal()
+    - Passes valid input - Returns successful column
+      - row== 0 
+      - Row == data.getRowCount -1
+      - 0<row<data.getRowCount -1
+    - Creating Values2D object:
+      - Negative values
+      - Positive values
+    - Passes invalid input - Throws InvalidParameterException
+      - Null passed in
 
 createNumberArray()
 Passes valid input - Returns successful array
